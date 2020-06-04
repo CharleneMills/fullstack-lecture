@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {loginUser} from '../redux/reducer';
 
-export default class Landing extends Component {
+class Landing extends Component {
     
     constructor(){
         super();
@@ -49,3 +51,9 @@ export default class Landing extends Component {
         )
     }
 }
+
+const mapStateToProps = reduxState => reduxState
+
+const mapDispatchToProps = {loginUser}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Landing)
