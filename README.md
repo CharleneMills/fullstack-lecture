@@ -80,14 +80,15 @@ auth:
  - Profile (/profile)
 
 **File Structure**
+- .env
 - src/
     - App.js
     - App.css
     - index.js
     - reset.css
     - redux/
-        - store
-        - reducer
+        - store.js
+        - reducer.js
     - components/
         - Landing/ .js and .css
         - Register/ .js and .css
